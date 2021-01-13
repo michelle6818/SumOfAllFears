@@ -1,63 +1,67 @@
 // index:      0,1,2,3,4,5,6,7,8, 9
 let numbers = [1,2,3,4,5,6,7,8,9,10];
 
-// wire up the button
-document.getElementById("btnSubmit").addEventListener("click", doJsWork);
+// wire up the button with a named function
+document.getElementById("btnSubmit").addEventListener("click", function(){
+    doJsWork()});
 
-
+// main driver function for app
 function doJsWork() {
-    
-    let size = numbers.length;
-    let arraySize = parseInt(document.getElementById("arraySize").value);
-    numbers = generateArray(arraySize);
+    //let numbers = generateArray();
+    let arraySize = parseInt(document.getElementById("arrayNum").value);
+    let numbers = generateArray(arraySize);
+    let element = document.getElementById("results");
+    let element2 = document.getElementById("results2");
+    let element3 = document.getElementById("results3");
 
+// step 2 add numbers/values to the array
+// let size = numbers.length;
+// size = numbers.push(11);
+// size = numbers.push(12);
 
-    // let element = 0;
-    output1 = document.getElementById("results");
-    output2 = document.getElementById("results2");
-    output3 = doucment.getElementById("results3");
+// step 3
+    // remove the last number from an array
+       // numbers.pop();
+    // remove the first number from the array
+      //  numbers.shift() ; 
 
-    output1.innerHTML = ""
-    output2.innerHTML = ""
-    output3.innerHTML = ""
-    // add values to the arry
-    // size = numbers.push(11);
-    // size = numbers.push(20);
+// step 4  - Note Returns on Array
+    // return all numbers > 5 (filter array, reduce it down)
+    // return number = 5
+    // return numbers < 5
 
-    // remove items
-    // numbers.pop();
+    var filtered = numbers.filter(function (value, index, arr) {
+        return value > 5;
+    });
 
-    // filter the array (reduce it down)
-     var filtered = numbers.filter(function(value, index, arr){
-      return value > 5;
-     }   
-    )
+// step 5 -Find a value in the array find a value in an array Will only return the FIRST Occurance -one item
+     
+var found = numbers.find(function (value, index, arr) {
+    return value > 5;
+});
+   
+//  step 6 - Find an item using includes a number ---TRUE or FALSE
 
-    
+    var found = numbers.includes(5);  
 
-// find a value in an array Will only return the FIRST Occurance -one item
-// var found = numbers.find(function(value,index,arr) {
-//     return value > 5;
+// step 7
 
-// })
-
-// true or false answer
-var found = numbers.includes(7);
-
+   var findNum = parseInt(document.getElementById("findNum").value);
+   var found = numbers.includes(findNum);
 
     // print out the full array
+
+    element3.innerHTML = found;
+
     for (let index = 0; index < numbers.length; index++) {
-         output1.innerHTML += `${numbers[index]} `;      
+        let num = numbers[index];
+        element.innerHTML += `${num} `;
     }
 
-    output2.innerHTML = found;
-    // print out filtered array
-     for (let index = 0; index < filtered.length; index++) {
-        output2.innerHTML += `${found[index]} `;
+    for (let index = 0; index < filtered.length; index++) {
+        let num = filtered[index];
+        element2.innerHTML += `${num} `;
     }
-
-    // output 3
-   output3.innerHTML = found; 
 }
 //    for (let index = 0; index < filtered.length; index++) {
     // output3.innerHTML += `${filtered[index]} `;
@@ -66,7 +70,7 @@ var found = numbers.includes(7);
 // generate an array of random values
 function generateArray(size){
    let randomArray = [];
-   for (let index = 0; index < size.length; index++) {
+   for (let index = 0; index < size; index++) {
     // generate random array...push random numbers to an array
        randomArray.push( Math.floor(Math.random() * 100) + 1);       
    }
