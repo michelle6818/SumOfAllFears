@@ -8,7 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="css/prism.css">  
+</head>
   <body>
       <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #031a2b;">
           <a class="navbar-brand" href="#">Sum of All Fears</a>
@@ -23,7 +24,7 @@
                       <a class="nav-link" href="solve.html">Solve</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="code.html">Code <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="code.html">Code<span class="sr-only">(current)</span></a>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://github.com/michelle6818/SumOfAllFears">GitHub</a>
                     </li>
@@ -35,11 +36,62 @@
               
           </div>
       </nav>
+      <div class="container">
+        <div class="row">
+            <div class="col">
+<pre class="line-numbers">
+<code class="language-javascript"> 
+// set my array list 
+let arrayNum = [3,7,10,15];
+let sumArray = [10,13,17,18,22,25];
+
+// wire up the button with a named function
+document.getElementById("btnSubmit").addEventListener("click", function(){
+    sumFears()});
+
+// main driver function for app
+function sumFears() {
+    let element3 = document.getElementById("results3");
+    var numK = parseInt(document.getElementById("numK").value);
+    var found = sumArray.includes(numK);
+    element3.innerHTML = found; 
+    
+}
+
+// Extra Credit
+// Let user set array list
+
+let arrayNum2 = [num1,num2,num3,num4];
+
+// button function
+document.getElementById("btnSubmit2").addEventListener("click", function(){
+    sumFears2()});
+
+// main driver function for app
+function sumFears2() {
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    var num3 = parseInt(document.getElementById("num3").value);
+    var num4 = parseInt(document.getElementById("num4").value);
+    let sumArray2 = [(num1 + num2),(num1 + num3),(num1 + num4),
+        (num2 + num3),(num2 + num4),(num3 + num4)];
+    let element3a = document.getElementById("results3a");
+    var numK2 = parseInt(document.getElementById("numK2").value);
+    var found = sumArray2.includes(numK2);
+    element3a.innerHTML = found;
+}  
+        
+    </code>
+</pre>
+</div>
+</div>
+</div> 
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <script src="js/prism.js"></script>
+</body>
 </html>
