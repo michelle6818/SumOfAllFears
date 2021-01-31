@@ -7,6 +7,8 @@ let sumArray = [10,13,17,18,22,25];
 // wire up the button with a named function
 document.getElementById("btnSubmit").addEventListener("click", function(){
     sumFears()});
+document.getElementById("clear1").addEventListener("click", Clear1);
+document.getElementById("clear2").addEventListener("click", Clear2);
 
 // main driver function for app
 function sumFears() {
@@ -39,8 +41,29 @@ function sumFears2() {
     var found = sumArray2.includes(numK2);
     element3a.innerHTML = found;
 }
+// generate an array of random values
+function generateArray(size){
+    let randomArray = [];
+    for (let index = 0; index < size; index++) {
+     // generate random array...push random numbers to an array
+        randomArray.push( Math.floor(Math.random() * 100) + 1);       
+    }
+ 
+    return randomArray;
+ }
+ function Clear1(){
+    document.getElementById("results3").innerText = "";
+    document.getElementById("numK").value = "";
+ }
 
-
+ function Clear2(){
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("num3").value = "";
+    document.getElementById("num4").value = "";
+    document.getElementById("numK2").value = "";
+    document.getElementById("results3a").innerText = "";
+}
 
  //let numbers = generateArray();
     // let arraySize = parseInt(document.getElementById("arrayNum").value);
@@ -103,13 +126,3 @@ function sumFears2() {
     // output3.innerHTML += `${filtered[index]} `;
 
 
-// generate an array of random values
-function generateArray(size){
-   let randomArray = [];
-   for (let index = 0; index < size; index++) {
-    // generate random array...push random numbers to an array
-       randomArray.push( Math.floor(Math.random() * 100) + 1);       
-   }
-
-   return randomArray;
-}

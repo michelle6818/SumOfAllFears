@@ -8,7 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
   <body>
       <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #002f4e;">
           <a class="navbar-brand" href="#">Sum of All Fears</a>
@@ -30,63 +31,68 @@
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="https://michellelongworth-portfolio.netlify.app">Portfolio</a>
                     </li>
-        
-              </ul>
-              
+              </ul>        
           </div>
       </nav>
-      <main class="container pt-3">
-        <div class="row">
-            <div class="col-md">
-              <h1>Sum of All Fears</h1> 
-              <p>Find out if "K" is the sum of any 2 numbers this array:</p>  
-              <label for="arrayNum">Array Numbers: 3, 7, 10, 15</label>
-              <p id="arrayNum" type="number" >
-              <br>
-              <label for="numK">Enter "K" Number</label>
-                <input id="numK" type="number">
+      
+      <header class="jumbotron jumbotron-fluid text-center">
+        <div class="container d-flex flex-column align-items-center aos-init aos-animate"
+        data-aos= "zoom-in"data-aos-delay= "100">
+            <h1 class="display-3">Sum of All Fears</h1>
+        <hr class="my-2">
+    </div>
+</header>
+<div class="card-columns offset-xlg text-center">
+    <div class="card offset-lg-5">
+        <div class="card-body" style="background-color: #002f4e;">
+            <h2 class="card-title white">Find out if "K" is the sum of any 2 numbers in a given array.</h2>  
+            <br>
+            <h4 class="card-text white">The array numbers are: 3, 7, 10, and 15</h4>
+            <p id="arrayNum" type="number">
+            <br>
+            <h6 class="white">Enter Your "K" Number</h6>
+            <input id="numK" type="number">
+            <br>
+            <br>
+          <button id="btnSubmit" class="btn btn-outline-info" >Submit</button> 
+          <button class="btn btn-outline-secondary" id="clear1">Clear</button>
                 <br>
-              <button id="btnSubmit" class="btn btn-primary" >Click Me</button>  
+                <br>
+                <h4 class="white">The answer is:</h4>
+                <p class="result" id="results3"></p>
+                <br>
             </div>
-            <div class="col-md">
-                <br>
-                <br>
-                <h4>The answer is:</h4>
-                <p id="results3"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md"> 
-              <p>Find out if "K" is the sum of any 2 numbers YOUR array:</p>
-              <p id="arrayNum2" type="number" > 
+    </div>
+    <div class="card offset-lg-7">
+            <div class="card-body" style="background-color: #002f4e;"> 
+              <h2 class="card-title white">Find out if "K" is the sum of any 2 numbers YOUR array:</h2>
+              <p id="arrayNum2 white" type="number"> 
               <div class="col"> 
-              <label for="num1">First Number   </label>
+              <label for="num1" class="white">First Number</label>
               <input id="num1" type="number">
               <br>
-              <label for="num2">Second Number</label>
+              <label for="num2" class="white" >Second Number</label>
               <input id="num2" type="number">
               <br>
-              <label for="num3">Third Number</label>
+              <label for="num3"class="white">Third Number</label>
               <input id="num3" type="number">
               <br>
-              <label for="num4">Fourth Number</label>
+              <label for="num4" class="white">Fourth Number</label>
               <input id="num4" type="number">
               <br>
-               <label for="numK2">Enter "K" Number</label>
+               <label for="numK2" class="white">Enter "K" Number</label>
                 <input id="numK2" type="number">
-                </div>
-                <br>
-              <button id="btnSubmit2" class="btn btn-primary" >Click Me</button>  
-            </div>
-            <div class="col-md"> 
                 <br>
                 <br>
-                <h4>This answer is:</h4>
-                <p id="results3a"></p>
-            </div>
-        </div>
-   </main>
-      
+              <button id="btnSubmit2" class="btn btn-outline-info" >Submit</button> 
+              <button class="btn btn-outline-secondary" id="clear2">Clear</button> 
+                <br>
+                <br>
+                <h4 class="white">This answer is:</h4>
+                <p class="result" id="results3a"></p>         
+    </div>
+</div>    
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
